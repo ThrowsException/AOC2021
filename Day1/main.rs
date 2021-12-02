@@ -12,7 +12,7 @@ fn main() {
 
     let contents = fs::read_to_string(filename).expect("Uh Oh");
 
-    let v: Vec<&str> = contents.split('\n').collect();
+    let v: Vec<&str> = contents.lines().collect();
 
     // println!("{:?}", v);
 

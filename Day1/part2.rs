@@ -12,7 +12,7 @@ fn main() {
 
     let contents = fs::read_to_string(filename).expect("Failed to read file");
 
-    let v: Vec<u16> = contents.split('\n').collect::<Vec<&str>>().iter().map(|s| s.parse().unwrap()).collect();
+    let v: Vec<u16> = contents.lines().collect::<Vec<&str>>().iter().map(|s| s.parse().unwrap()).collect();
 
     let mut count = 0;
     let mut last = 0;
